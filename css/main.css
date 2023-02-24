@@ -1,0 +1,136 @@
+::-moz-selection {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+::selection {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lilita One", cursive;
+  color: #fff;
+  background-color: #0c1115;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Tilt Prism", cursive;
+  font-family: "Lobster", cursive;
+  margin: 0;
+}
+
+#main .container .row .all-card-div .all-card {
+  background: #212529;
+  border: 1px solid #3d3d3d;
+  border-radius: 5px;
+}
+#main .container .row .all-card-div .all-card .card-titleX {
+  padding: 10px;
+  background: #0c1115;
+  border-radius: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main .container .row .all-card-div .all-card .card-titleX .counter {
+  min-width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #212529;
+  border-radius: 50%;
+}
+#main .container .row .all-card-div .all-card .card-bodyX {
+  padding: 0 15px;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX {
+  padding: 10px;
+  border-radius: 5px;
+  margin-block: 20px;
+  box-shadow: 0 0 20px -10px rgba(186, 186, 186, 0.5333333333);
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX > * {
+  margin-bottom: 10px;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX p.tast-title {
+  font-size: 1.5rem;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .category {
+  padding: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .category.Education {
+  background: #11b9b9;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .category.Health {
+  background: #11b957;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .category.Finance {
+  background: #b98b11;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .category.Productivity {
+  background: #b91111;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .all-icons {
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .all-icons .icon {
+  margin: 5px 10px;
+  cursor: pointer;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .all-icons .icon:hover svg {
+  opacity: 1;
+}
+#main .container .row .all-card-div .all-card .card-bodyX .cardX .all-icons .icon svg {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+#modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7490196078);
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+#modal.show {
+  transform: scale(1);
+}
+#modal .form-check {
+  display: none;
+}
+#modal #update-btn {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

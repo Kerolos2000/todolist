@@ -1,0 +1,142 @@
+$mainColor: #0c1115;
+$secondaryColor: #17a2b8;
+$blackColor: #000;
+$whiteColor: #fff;
+
+::selection {
+  background-color: $secondaryColor;
+  color: $whiteColor;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $whiteColor;
+}
+::-webkit-scrollbar-track {
+  background-color: $blackColor;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lilita One", cursive;
+  color: $whiteColor;
+  background-color: $mainColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Tilt Prism", cursive;
+  font-family: "Lobster", cursive;
+  margin: 0;
+}
+
+#main {
+  .container {
+    .row {
+      .all-card-div {
+        .all-card {
+          background: #212529;
+          border: 1px solid #3d3d3d;
+          border-radius: 5px;
+          .card-titleX {
+            padding: 10px;
+            background: $mainColor;
+            border-radius: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .counter {
+              min-width: 25px;
+              height: 25px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #212529;
+              border-radius: 50%;
+            }
+          }
+          .card-bodyX {
+            padding: 0 15px;
+            .cardX {
+              padding: 10px;
+              border-radius: 5px;
+              // background: $mainColor;
+              margin-block: 20px;
+              box-shadow: 0 0 20px -10px #bababa88;
+              & > * {
+                margin-bottom: 10px;
+              }
+              p.tast-title {
+                font-size: 1.5rem;
+              }
+              .category {
+                padding: 5px;
+                width: fit-content;
+                border-radius: 5px;
+                &.Education {
+                  background: #11b9b9;
+                }
+                &.Health {
+                  background: #11b957;
+                }
+                &.Finance {
+                  background: #b98b11;
+                }
+                &.Productivity {
+                  background: #b91111;
+                }
+              }
+              .all-icons {
+                font-size: 1.2rem;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                .icon {
+                  margin: 5px 10px;
+                  cursor: pointer;
+                  &:hover svg {
+                    opacity: 1;
+                  }
+                  svg {
+                    transition: 0.5s;
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#modal {
+  position: fixed;
+  background: #000000bf;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.5s;
+  &.show {
+    transform: scale(1);
+  }
+  .form-check {
+    display: none;
+  }
+  #update-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ToDo List">
+  <link rel="shortcut icon" href="./img/right-to-bracket-solid.svg">
+  <title>ToDo List</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="custom-scrollbar" id="index">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark text-white">
+    <div class="container">
+      <h3 class="m-0">Daily Task</h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <input class="form-control w-50" type="search" placeholder="Search" id="Search" aria-label="Search">
+      </div>
+    </div>
+  </nav>
+
+  <!-- main section -->
+  <section id="main">
+    <div class="container">
+      <div class="main-btn-div my-5 text-center">
+        <button class="main-btn btn btn-warning py-2 px-4"><i class="fa-solid fa-file-medical"></i> Add New
+          Task</button>
+      </div>
+      <div class="row g-3">
+
+        <!-- Next Up -->
+        <div class="all-card-div col-md-6 col-lg-4">
+          <div class="all-card">
+            <div class="card-titleX">
+              <h5>Next Up</h5>
+              <div class="counter">
+                <h6>1</h6>
+              </div>
+            </div>
+
+            <div class="card-bodyX" id="nextUpDiv">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="all-card-div col-md-6 col-lg-4">
+          <div class="all-card">
+            <div class="card-titleX">
+              <h5>In Progress</h5>
+              <div class="counter">
+                <h6>1</h6>
+              </div>
+            </div>
+
+            <div class="card-bodyX" id="inProgressDiv">
+              <!-- <div class="cardX">
+                <h5 class="tast-title">tast title</h5>
+                <p class="desc">Discription</p>
+                <p class="category Productivity">category</p>
+                <div class="all-icons">
+                  <div class="icon edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                  <div class="icon delete">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </div>
+                  <div class="icon palette">
+                    <i class="fa-solid fa-palette"></i>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Done -->
+        <div class="all-card-div col-md-6 col-lg-4">
+          <div class="all-card">
+            <div class="card-titleX">
+              <h5>Done</h5>
+              <div class="counter">
+                <h6>1</h6>
+              </div>
+            </div>
+
+            <div class="card-bodyX" id="doneDiv">
+              <!-- <div class="cardX">
+                <h5 class="tast-title">tast title</h5>
+                <p class="desc">Discription</p>
+                <p class="category Productivity">category</p>
+                <div class="all-icons">
+                  <div class="icon edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </div>
+                  <div class="icon delete">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </div>
+                  <div class="icon palette">
+                    <i class="fa-solid fa-palette"></i>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- floating Modal -->
+  <div id="modal">
+    <div class="container">
+      <div class="form text-dark">
+
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingInput1">
+            <option value="Next Up">Next Up</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+          </select>
+          <label for="floatingInput1">Select Tast Status</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingInput2">
+            <option value="Education">Education</option>
+            <option value="Health & Fitness">Health & Fitness</option>
+            <option value="Finance">Finance</option>
+            <option value="Productivity">Productivity</option>
+          </select>
+          <label for="floatingInput2">Select Category</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput3" placeholder="text">
+          <label for="floatingInput3">Tast Title</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput4" placeholder="text">
+          <label for="floatingInput4">Tast Description</label>
+        </div>
+
+        <div class="form-check text-white mb-3">
+          <input class="form-check-input" type="checkbox" value="#0c1115" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <button class="btn btn-success w-100 py-2 px-4" id="add-btn">Add Task</button>
+        </div>
+
+        <div class="form-floating mb-3">
+          <button class="btn btn-info text-white w-100 py-2 px-4" id="update-btn">Update Task</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- fontawesome -->
+  <script src="js/all.min.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
